@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Login WIth OTP</string>
+    <string name="textToSendOtp">We will send you an One Time Password on this mobile number</string>
+</resources>

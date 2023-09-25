@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:id="@+id/getOtpLayout"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/otp_sent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:lineHeight="20dp"
+        android:text="@string/textToSendOtp"
+        android:textSize="16dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Mobile Number"
+        android:textSize="16dp"
+        android:fontFamily="serif-monospace"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/disabledTextNumber"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+91"
+            android:maxLength="10"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:inputType="phone"
+            android:focusable="false"
+            android:allowClickWhenDisabled="false"/>
+
+        <EditText
+            android:id="@+id/getNumber"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLength="10"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:layout_marginBottom="20dp"
+            android:inputType="phone"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/sendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/material_dynamic_neutral_variant95"
+            android:fontFamily="sans-serif-black"
+            android:text="Get OTP"
+            android:textSize="20dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/getOtpProgress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+</LinearLayout>
